@@ -85,7 +85,7 @@
 ### Functional Requirements
 
 - **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]
+- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
@@ -94,12 +94,6 @@
 
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
-
-### Feature Level Classification
-
-- **Tier**: [Basic/Intermediate/Advanced - according to constitution feature levels]
-- **Dependencies**: [List any dependencies on other tiers or features]
-- **Backward Compatibility**: [Confirm if this feature maintains compatibility with existing functionality]
 
 ### Key Entities *(include if feature involves data)*
 
