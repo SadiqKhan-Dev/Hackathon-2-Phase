@@ -32,7 +32,21 @@
       "Bash(then ls \"C:\\\\Users\\\\dell\\\\Desktop\\\\spec-project\\\\NewFullstack\\\\specs\\\\003-flagship-ui\\\\checklists\")",
       "Bash(ls:*)",
       "Bash(npm run build:*)",
-      "Skill(sp.phr)"
+      "Skill(sp.phr)",
+      "Bash(python -c \"from app.main import app; print\\(''Backend app structure loaded successfully''\\)\")",
+      "Bash(curl http://127.0.0.1:8000/health)",
+      "Bash(curl -X POST \"http://127.0.0.1:8000/api/auth/sign-up\" -H \"Content-Type: application/json\" -d \"{\"\"email\"\":\"\"test@example.com\"\", \"\"name\"\":\"\"Test User\"\", \"\"password\"\":\"\"testpassword123\"\"}\")",
+      "Bash(curl -X POST \"http://127.0.0.1:8000/api/auth/sign-in\" -H \"Content-Type: application/json\" -d \"{\"\"email\"\":\"\"test@example.com\"\", \"\"password\"\":\"\"testpassword123\"\"}\")",
+      "Bash(taskkill /f /pid 10432)",
+      "Bash(curl -X GET \"http://127.0.0.1:8000/api/tasks/\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOGY2MDQ4OS1mZTM5LTQwNjgtYTVlMy01NjgxZWE3M2IzOTciLCJleHAiOjE3NzAwMTQwNzcsImlhdCI6MTc2OTQwOTI3N30.lsWJ2FsC3w7DCUkyuZM8k_ocjUhHZjH4zjzRQljNxos\")",
+      "Bash(curl -X POST \"http://127.0.0.1:8000/api/tasks/\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOGY2MDQ4OS1mZTM5LTQwNjgtYTVlMy01NjgxZWE3M2IzOTciLCJleHAiOjE3NzAwMjgxODksImlhdCI6MTc2OTQyMzM4OX0.42y9kRwYMYzXzERmUxBV4LlqQlN5ORUP95duXtR8hkY\" -H \"Content-Type: application/json\" -d \"{\"\"title\"\":\"\"Test task from CLI\"\", \"\"description\"\":\"\"This is a test task created via CLI\"\"}\")",
+      "Bash(taskkill /f /pid 10692)",
+      "Bash(curl -X POST \"http://127.0.0.1:8000/api/tasks/\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOGY2MDQ4OS1mZTM5LTQwNjgtYTVlMy01NjgxZWE3M2IzOTciLCJleHAiOjE3NzAwMjg2OTAsImlhdCI6MTc2OTQyMzg5MH0.jzbNJdixL6-nfv-KdP_jyET9Cs1YE_-I1aHNTv4OH8E\" -H \"Content-Type: application/json\" -d \"{\"\"title\"\":\"\"Test task from CLI\"\", \"\"description\"\":\"\"This is a test task created via CLI\"\"}\")",
+      "Bash(timeout 5 cat \"C:\\\\Users\\\\SADIQK~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--VS-CODES-Prompt-MCP-sadiq-project-TODO-Projects-Phase-2-Full-Stack-Web-Application\\\\tasks\\\\bcdb56c.output\")",
+      "Bash(uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload)",
+      "Bash(curl -X POST \"http://127.0.0.1:8000/api/tasks/\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiOGY2MDQ4OS1mZTM5LTQwNjgtYTVlMy01NjgxZWE3M2IzOTciLCJleHAiOjE3NzAwMjg5MTcsImlhdCI6MTc2OTQyNDExN30.txRqJVegzW9ZQpv4DUsbv8B4-bZDkXUnPm91uwomcOo\" -H \"Content-Type: application/json\" -d \"{\"\"title\"\":\"\"Test task from CLI\"\", \"\"description\"\":\"\"This is a test task created via CLI\"\"}\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\\\Users\\\\SADIQK~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--VS-CODES-Prompt-MCP-sadiq-project-TODO-Projects\\\\Phase-2-Full-Stack-Web-Application\\\\tasks\\\\b920274.output'' -Tail 50\")",
+      "Bash(taskkill /f /pid 9604)"
     ]
   }
 }
