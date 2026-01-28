@@ -18,7 +18,7 @@ app = FastAPI(title=settings.PROJECT_NAME, lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:3001", "http://127.0.0.1:3001"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -28,10 +28,21 @@ app.add_middleware(
 async def global_exception_handler(request: Request, exc: Exception):
     # Log full traceback to server stdout for debugging
     traceback.print_exception(type(exc), exc, exc.__traceback__)
-    return JSONResponse(
-        status_code=500,
-        content={"detail": "An internal server error occurred."},
-    )
+    # Return more detailed error in development
+    import os
+    if os.getenv("ENVIRONMENT") == "development" or True:  # Always return details for debugging
+        return JSONResponse(
+            status_code=500,
+            content={
+                "detail": f"An internal server error occurred: {str(exc)}",
+                "error_type": type(exc).__name__
+            },
+        )
+    else:
+        return JSONResponse(
+            status_code=500,
+            content={"detail": "An internal server error occurred."},
+        )
 
 app.include_router(auth.router, prefix="/api")
 app.include_router(tasks.router, prefix="/api/tasks")
