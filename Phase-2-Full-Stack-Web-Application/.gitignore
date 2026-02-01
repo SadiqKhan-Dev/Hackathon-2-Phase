@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+.env*
+.next/
+out/
+
+# IDE and OS specific
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp

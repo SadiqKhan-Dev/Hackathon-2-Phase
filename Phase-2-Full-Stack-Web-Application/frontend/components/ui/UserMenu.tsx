@@ -53,10 +53,10 @@ export function UserMenu() {
         <div className="flex items-center gap-4">
             {userName && (
                 <div className="hidden md:flex flex-col items-end">
-                    <span className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">
+                    <span className="text-xs text-textSecondary dark:text-textSecondary font-medium uppercase tracking-wider">
                         Welcome back
                     </span>
-                    <span className="text-sm font-bold text-slate-900 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
+                    <span className="text-sm font-bold text-textPrimary dark:text-background bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary dark:from-primary dark:to-primary">
                         {userName}
                     </span>
                 </div>
@@ -66,11 +66,11 @@ export function UserMenu() {
                 onClick={handleLogout}
                 className={cn(
                     "relative group overflow-hidden px-4 py-2 rounded-xl",
-                    "bg-white dark:bg-slate-800",
-                    "border border-slate-200 dark:border-slate-700",
-                    "text-sm font-semibold text-slate-700 dark:text-slate-200",
-                    "hover:border-rose-200 dark:hover:border-rose-900",
-                    "hover:text-rose-600 dark:hover:text-rose-400",
+                    "bg-background dark:bg-background",
+                    "border border-secondary/20 dark:border-secondary/40",
+                    "text-sm font-semibold text-textPrimary dark:text-textSecondary",
+                    "hover:border-danger/20 dark:hover:border-danger/40",
+                    "hover:text-danger dark:hover:text-danger/80",
                     "transition-all duration-300 ease-out-cubic",
                     "shadow-sm hover:shadow-md"
                 )}

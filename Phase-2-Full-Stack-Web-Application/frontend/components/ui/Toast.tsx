@@ -134,13 +134,13 @@ function ToastComponent({ toast, onRemove }: ToastComponentProps) {
   const variantClasses: Record<ToastType, string> = {
     // Success: emerald colors
     success:
-      'bg-emerald-50 border-emerald-200 text-emerald-900 dark:bg-emerald-950/20 dark:border-emerald-800 dark:text-emerald-100',
+      'bg-accent/10 border-accent/20 text-textPrimary dark:border-accent/40 dark:text-accent',
     // Error: rose colors
     error:
-      'bg-rose-50 border-rose-200 text-rose-900 dark:bg-rose-950/20 dark:border-rose-800 dark:text-rose-100',
+      'bg-danger/10 border-danger/20 text-textPrimary dark:border-danger/40 dark:text-danger',
     // Info: slate colors
     info:
-      'bg-slate-50 border-slate-200 text-slate-900 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100',
+      'bg-secondary/10 border-secondary/20 text-textPrimary dark:border-secondary/40 dark:text-secondary',
   };
 
   /**
@@ -151,7 +151,7 @@ function ToastComponent({ toast, onRemove }: ToastComponentProps) {
     success: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-6 h-6 text-emerald-600 dark:text-emerald-400"
+        className="w-6 h-6 text-accent dark:text-accent/80"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -167,7 +167,7 @@ function ToastComponent({ toast, onRemove }: ToastComponentProps) {
     error: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-6 h-6 text-rose-600 dark:text-rose-400"
+        className="w-6 h-6 text-danger dark:text-danger/80"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -181,7 +181,7 @@ function ToastComponent({ toast, onRemove }: ToastComponentProps) {
     info: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-6 h-6 text-slate-500 dark:text-slate-400"
+        className="w-6 h-6 text-secondary dark:text-secondary/80"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

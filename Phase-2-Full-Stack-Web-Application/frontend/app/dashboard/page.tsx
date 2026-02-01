@@ -171,26 +171,26 @@ export default function DashboardPage() {
           <div className="lg:col-span-3 rounded-2xl p-6 border border-border bg-card shadow-sm">
             <div className="flex justify-between items-end mb-6">
               <div>
-                <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Productivity Score</p>
+                <p className="text-xs font-medium text-textSecondary uppercase tracking-wider mb-2">Productivity Score</p>
                 <div className="flex items-center gap-4">
-                  <span className="text-5xl font-bold text-foreground">{progress}%</span>
-                  <div className="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-xs font-medium border border-emerald-500/20">
+                  <span className="text-5xl font-bold text-textPrimary">{progress}%</span>
+                  <div className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium border border-accent/20">
                     +15% IMPROVEMENT
                   </div>
                 </div>
               </div>
               <div className="text-right hidden sm:block">
-                <p className="text-sm text-muted-foreground">Completion Rate</p>
+                <p className="text-sm text-textSecondary">Completion Rate</p>
                 <p className="text-xl font-semibold text-primary">{completedCount}/{totalCount}</p>
               </div>
             </div>
-            <div className="w-full h-2 bg-muted rounded-full overflow-hidden mb-4">
+            <div className="w-full h-2 bg-textSecondary/20 rounded-full overflow-hidden mb-4">
               <div
                 className="h-full bg-primary rounded-full transition-all duration-700 ease-out"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <p className="text-sm text-muted-foreground max-w-md">
+            <p className="text-sm text-textSecondary max-w-md">
               {totalCount === 0
                 ? "Workspace ready. Begin organizing your tasks."
                 : `Completed ${completedCount} tasks successfully. ${totalCount - completedCount} tasks remain in your queue.`}
@@ -199,11 +199,11 @@ export default function DashboardPage() {
 
           <div className="rounded-2xl p-6 border border-border bg-card shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-200 cursor-pointer" onClick={() => setShowAddModal(true)}>
             <div>
-              <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-lg bg-primary text-textPrimary flex items-center justify-center mb-4">
                 <Plus className="w-6 h-6" strokeWidth={3} />
               </div>
               <h3 className="text-lg font-semibold mb-2">New Task</h3>
-              <p className="text-sm text-muted-foreground">Instantly capture high-priority tasks in your ecosystem.</p>
+              <p className="text-sm text-textSecondary">Instantly capture high-priority tasks in your ecosystem.</p>
             </div>
             <div className="mt-4 flex items-center gap-2 text-primary text-sm font-medium">
               Add Task <ArrowRight className="w-4 h-4" />
@@ -214,7 +214,7 @@ export default function DashboardPage() {
         {/* Tasks Section Header */}
         <div className="flex items-center justify-between mb-10 animate-welcome" style={{ animationDelay: '0.2s' }}>
           <div className="flex items-center gap-4">
-            <h3 className="text-2xl font-black tracking-tighter">My Tasks</h3>
+            <h3 className="text-2xl font-bold tracking-tighter">My Tasks</h3>
             <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span className="px-4 py-1 bg-muted/50 rounded-full text-foreground text-[10px] font-black tracking-[0.2em] border border-ui-border/20">
               {todos.length} TASKS
@@ -286,10 +286,10 @@ export default function DashboardPage() {
                   {editingTodo ? <Sparkles className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold leading-none">
+                  <h3 className="text-xl font-bold leading-none">
                     {editingTodo ? 'Update Task' : 'Create New Task'}
                   </h3>
-                  <p className="text-xs text-muted-foreground uppercase font-medium">Task Management Platform</p>
+                  <p className="text-xs text-textSecondary uppercase font-medium">Task Management Platform</p>
                 </div>
               </div>
               <button
@@ -300,13 +300,13 @@ export default function DashboardPage() {
                 }}
                 className="w-8 h-8 rounded-sm hover:bg-accent transition-colors flex items-center justify-center"
               >
-                <X className="w-4 h-4 text-muted-foreground" />
+                <X className="w-4 h-4 text-textSecondary" />
               </button>
             </div>
 
             <form onSubmit={editingTodo ? handleUpdateTodo : handleAddTodo} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Task Name</label>
+                <label className="text-sm font-medium text-textPrimary">Task Name</label>
                 <Input
                   type="text"
                   value={formData.title}

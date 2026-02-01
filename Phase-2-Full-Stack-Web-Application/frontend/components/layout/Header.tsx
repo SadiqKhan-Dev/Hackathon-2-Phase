@@ -28,11 +28,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-3 transition-all duration-200 hover:opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-                <CheckCircle2 className="w-5 h-5" strokeWidth={3} />
-              </div>
               <h1 className="text-xl font-bold text-foreground leading-none">
-                Task-<span className="text-primary">Agent</span>-Pro
+                Task <span className="text-primary">Agent</span> Pro
               </h1>
             </Link>
 

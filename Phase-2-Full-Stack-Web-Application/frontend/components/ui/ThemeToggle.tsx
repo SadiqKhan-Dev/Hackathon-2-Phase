@@ -88,43 +88,42 @@ const ThemeToggle = ({ position = 'header', showLabel = false, className }: Them
    * Subtle fill or path animation on hover
    * Micro-lift (200-300ms) with ease-out-cubic
    */
-  const buttonClasses = cn(
-    // Base styles
-    'inline-flex items-center justify-center rounded-md',
-    // Theme-specific styles
-    'bg-background border border-input',
-    // Hover state
-    'hover:bg-accent hover:text-accent-foreground',
-    // T035: Hover micro-lift animation (200-300ms ease-out-cubic)
-    'hover:-translate-y-px transition-all duration-200',
-    // Focus state
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-    // Active state
-    'active:translate-y-0',
-    // Size and padding
-    'p-2',
-    className
-  );
-
-  return (
-    <button
-      type="button"
-      onClick={toggleTheme}
-      className={buttonClasses}
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-      title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-    >
-      {/* Show opposite theme icon */}
-      {theme === 'dark' ? sunIcon : moonIcon}
-
-      {/* Optional label */}
-      {showLabel && (
-        <span className="ml-2 text-sm font-medium text-foreground">
-          {theme === 'light' ? 'Dark' : 'Light'}
-        </span>
-      )}
-    </button>
-  );
+      const buttonClasses = cn(
+        // Base styles
+        'inline-flex items-center justify-center rounded-md',
+        // Theme-specific styles
+        'bg-background border border-input',
+        // Hover state
+        'hover:bg-accent hover:text-textPrimary', // Changed hover:text-accent-foreground to hover:text-textPrimary
+        // T035: Hover micro-lift animation (200-300ms ease-out-cubic)
+        'hover:-translate-y-px transition-all duration-200',
+        // Focus state
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2', // Changed focus-visible:ring-ring to focus-visible:ring-primary
+        // Active state
+        'active:translate-y-0',
+        // Size and padding
+        'p-2',
+        className
+      );
+  
+      return (
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className={buttonClasses}
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        >
+        {/* Show opposite theme icon */}
+        {theme === 'dark' ? sunIcon : moonIcon}
+  
+        {/* Optional label */}
+        {showLabel && (
+          <span className="ml-2 text-sm font-medium text-textPrimary"> {/* Changed text-foreground to text-textPrimary */}
+            {theme === 'light' ? 'Dark' : 'Light'}
+          </span>
+        )}
+      </button>  );
 };
 
 export { ThemeToggle };

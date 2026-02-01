@@ -39,7 +39,7 @@ const SkeletonCard = ({ className }: SkeletonCardProps) => {
         /**
          * T048: SkeletonCard visual specifications from design-system.md
          */
-        'rounded-xl bg-muted p-6 h-32 border border-border',
+        'rounded-xl bg-background p-6 h-32 border border-border',
         className
       )}
     >
@@ -52,7 +52,7 @@ const SkeletonCard = ({ className }: SkeletonCardProps) => {
              * T048: Shimmer animation (1.5s infinite)
              * From design-system.md with gradient background
              */
-            'bg-muted',
+            'bg-secondary',
             'animate-shimmer'
           )}
         />
@@ -61,7 +61,7 @@ const SkeletonCard = ({ className }: SkeletonCardProps) => {
         <div
           className={cn(
             'h-3 w-1/2 rounded-md',
-            'bg-muted',
+            'bg-secondary',
             'animate-shimmer animate-delay-100'
           )}
         />
@@ -70,7 +70,7 @@ const SkeletonCard = ({ className }: SkeletonCardProps) => {
         <div
           className={cn(
             'h-3 w-2/3 rounded-md',
-            'bg-muted',
+            'bg-secondary',
             'animate-shimmer animate-delay-200'
           )}
         />
