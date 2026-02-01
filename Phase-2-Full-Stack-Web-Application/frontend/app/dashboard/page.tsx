@@ -282,7 +282,7 @@ export default function DashboardPage() {
           <div className="relative w-full max-w-lg rounded-xl border bg-popover p-6 shadow-lg animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-md bg-primary text-primary-foreground flex items-center justify-center">
+                <div className="w-10 h-10 rounded-md bg-primary text-background flex items-center justify-center">
                   {editingTodo ? <Sparkles className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                 </div>
                 <div>

@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#4F46E5', // Indigo 600
-        secondary: '#6B7280', // Gray 500
-        accent: '#10B981', // Emerald 500
-        background: '#F9FAFB', // Gray 50
-        textPrimary: '#1F2937', // Gray 800
-        textSecondary: '#4B5563', // Gray 600
-        danger: '#EF4444', // Red 500
+        primary: '#8B5CF6', // Violet 500
+        secondary: '#374151', // Gray 700
+        accent: '#EC4899', // Pink 500
+        background: '#111827', // Gray 900
+        textPrimary: '#F9FAFB', // Gray 50
+        textSecondary: '#9CA3AF', // Gray 400
+        danger: '#EF4444', // Red 500 (kept consistent)
       },
       fontSize: {
         'xs': '.75rem',
