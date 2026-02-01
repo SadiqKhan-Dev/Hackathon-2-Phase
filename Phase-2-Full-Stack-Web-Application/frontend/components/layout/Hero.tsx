@@ -57,8 +57,8 @@ export default function Hero({ userName = 'User', pending = 0, onPrimaryAction }
             <svg viewBox="0 0 320 180" className="w-full h-24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.9" /> {/* Updated to primary hex */}
-                  <stop offset="100%" stopColor="#EC4899" stopOpacity="0.6" /> {/* Updated to accent hex */}
+                  <stop offset="0%" stopColor="#A78BFA" stopOpacity="0.9" /> {/* Updated to new primary hex */}
+                  <stop offset="100%" stopColor="#FBBF24" stopOpacity="0.6" /> {/* Updated to new accent hex */}
                 </linearGradient>
               </defs>
               <rect width="100%" height="100%" fill="url(#g1)" rx="8" ry="8" opacity="0.12" />

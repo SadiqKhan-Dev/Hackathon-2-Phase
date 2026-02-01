@@ -216,7 +216,7 @@ export default function DashboardPage() {
           <div className="flex items-center gap-4">
             <h3 className="text-2xl font-bold tracking-tighter">My Tasks</h3>
             <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            <span className="px-4 py-1 bg-muted/50 rounded-full text-foreground text-[10px] font-black tracking-[0.2em] border border-ui-border/20">
+            <span className="px-4 py-1 bg-secondary/50 rounded-full text-textPrimary text-[10px] font-black tracking-[0.2em] border border-ui-border/20">
               {todos.length} TASKS
             </span>
           </div>
@@ -282,7 +282,7 @@ export default function DashboardPage() {
           <div className="relative w-full max-w-lg rounded-xl border bg-popover p-6 shadow-lg animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-md bg-primary text-background flex items-center justify-center">
+                <div className="w-10 h-10 rounded-md bg-primary text-textPrimary flex items-center justify-center">
                   {editingTodo ? <Sparkles className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                 </div>
                 <div>
@@ -319,7 +319,7 @@ export default function DashboardPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Details</label>
+                <label className="text-sm font-medium text-textPrimary">Details</label>
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}

@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { UserMenu } from '@/components/ui/UserMenu';
 import { cn } from '@/lib/utils';
-import { Layout, CheckCircle2 } from 'lucide-react';
+// import { Layout, CheckCircle2 } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
@@ -62,7 +62,7 @@ export default function Header() {
 
             {!pathname?.includes('/dashboard') && (
               <Link href="/dashboard" className="hidden sm:block">
-                <button className="px-4 py-2 bg-primary text-background text-sm font-medium rounded-md hover:opacity-90 transition-opacity ml-2">
+                <button className="px-4 py-2 bg-primary text-textPrimary text-sm font-medium rounded-md hover:opacity-90 transition-opacity ml-2">
                   Open Dashboard
                 </button>
               </Link>

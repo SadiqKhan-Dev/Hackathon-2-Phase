@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#8B5CF6', // Violet 500
-        secondary: '#374151', // Gray 700
-        accent: '#EC4899', // Pink 500
-        background: '#111827', // Gray 900
-        textPrimary: '#F9FAFB', // Gray 50
-        textSecondary: '#9CA3AF', // Gray 400
-        danger: '#EF4444', // Red 500 (kept consistent)
+        primary: '#A78BFA', // Violet 400
+        secondary: '#4B5563', // Gray 600
+        accent: '#FBBF24', // Amber 400
+        background: '#0F172A', // Slate 900
+        textPrimary: '#F8FAFC', // Slate 50
+        textSecondary: '#94A3B8', // Slate 400
+        danger: '#DC2626', // Red 600
       },
       fontSize: {
         'xs': '.75rem',
