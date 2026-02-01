@@ -58,16 +58,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const variantClasses: Record<ButtonVariant, string> = {
       // Primary variant - indigo with hover lift
       primary:
-        'bg-primary text-primary-foreground shadow-sm hover:shadow-md hover:bg-primary/90 disabled:bg-primary/50',
+        'bg-primary text-textPrimary shadow-sm hover:shadow-md hover:bg-primary/90 disabled:bg-primary/50',
       // Secondary variant - white surface with border
       secondary:
-        'bg-secondary text-secondary-foreground border border-border hover:bg-secondary/80 disabled:bg-secondary/50',
+        'bg-secondary text-textPrimary border border-border hover:bg-secondary/80 disabled:bg-secondary/50',
       // Ghost variant - transparent with hover background
       ghost:
-        'bg-transparent text-foreground hover:bg-accent disabled:text-muted-foreground',
+        'bg-transparent text-textPrimary hover:bg-accent disabled:text-textSecondary',
       // Danger variant - rose for destructive actions
       danger:
-        'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 disabled:bg-destructive/50',
+        'bg-danger text-textPrimary shadow-sm hover:bg-danger/90 disabled:bg-danger/50',
     };
 
     /**

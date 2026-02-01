@@ -28,11 +28,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-3 transition-all duration-200 hover:opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-                <CheckCircle2 className="w-5 h-5" strokeWidth={3} />
-              </div>
-              <h1 className="text-xl font-bold text-foreground leading-none">
-                Task-<span className="text-primary">Agent</span>-Pro
+              <h1 className="text-xl font-bold text-textPrimary leading-none">
+                Task <span className="text-primary">Agent</span> Pro
               </h1>
             </Link>
 
@@ -42,7 +39,7 @@ export default function Header() {
                 href="/"
                 className={cn(
                   "px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                  pathname === '/' ? "bg-accent text-accent-foreground" : "text-foreground/70 hover:text-foreground hover:bg-accent/50"
+                  pathname === '/' ? "bg-accent text-textPrimary" : "text-textPrimary/70 hover:text-textPrimary hover:bg-accent/50"
                 )}
               >
                 Home
@@ -51,7 +48,7 @@ export default function Header() {
                 href="/dashboard"
                 className={cn(
                   "px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                  pathname === '/dashboard' ? "bg-accent text-accent-foreground" : "text-foreground/70 hover:text-foreground hover:bg-accent/50"
+                  pathname === '/dashboard' ? "bg-accent text-textPrimary" : "text-textPrimary/70 hover:text-textPrimary hover:bg-accent/50"
                 )}
               >
                 Dashboard
@@ -65,7 +62,7 @@ export default function Header() {
 
             {!pathname?.includes('/dashboard') && (
               <Link href="/dashboard" className="hidden sm:block">
-                <button className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity ml-2">
+                <button className="px-4 py-2 bg-primary text-background text-sm font-medium rounded-md hover:opacity-90 transition-opacity ml-2">
                   Open Dashboard
                 </button>
               </Link>

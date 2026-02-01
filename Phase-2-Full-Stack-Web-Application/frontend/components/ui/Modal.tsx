@@ -105,7 +105,7 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
     const backdropClasses = cn(
       'fixed inset-0 z-50',
       // T025: Backdrop with blur
-      'bg-slate-900/50 backdrop-blur-md',
+      'bg-textPrimary/50 backdrop-blur-md', // Changed bg-slate-900/50 to bg-textPrimary/50
       // Fade animation
       isAnimatingOut
         ? 'animate-[fadeOut_200ms_ease-in]'
@@ -120,9 +120,9 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
     const contentClasses = cn(
       'relative z-10 w-full mx-4',
       // T026: Content styling
-      'bg-white rounded-2xl shadow-xl dark:bg-slate-800 dark:shadow-2xl',
+      'bg-background rounded-2xl shadow-xl', // Changed bg-white and removed dark:bg-slate-800
       // Glassmorphism effect
-      'border border-slate-100 dark:border-slate-700',
+      'border border-border', // Changed border-slate-100 and removed dark:border-slate-700
       sizeClasses[size],
       // T027: Entrance animation - scale 0.95→1, opacity 0→1, 300ms ease-out-cubic
       isAnimatingOut
@@ -148,10 +148,10 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
         <div ref={ref || contentRef} className={contentClasses} role="document">
           {/* Header */}
           {title && (
-            <div className="flex items-center justify-between border-b border-slate-100 px-8 pt-8 pb-4 dark:border-slate-700">
+            <div className="flex items-center justify-between border-b border-border px-8 pt-8 pb-4"> <!-- Changed border-slate-100 and removed dark:border-slate-700 -->
               <h2
                 id="modal-title"
-                className="text-2xl font-bold text-slate-900 dark:text-slate-50"
+                className="text-2xl font-bold text-textPrimary dark:text-background" <!-- Changed text-slate-900 and dark:text-slate-50 -->
               >
                 {title}
               </h2>
@@ -161,9 +161,9 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
                   onClick={handleClose}
                   className={cn(
                     'rounded-xl p-2 transition-all duration-300 ease-out-cubic',
-                    'hover:bg-slate-100 dark:hover:bg-slate-700',
-                    'focus:outline-none focus:ring-2 focus:ring-indigo-500/20',
-                    'text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300'
+                    'hover:bg-secondary dark:hover:bg-textSecondary', // Changed hover:bg-slate-100 and dark:hover:bg-slate-700
+                    'focus:outline-none focus:ring-2 focus:ring-primary/20', // Changed focus:ring-indigo-500/20
+                    'text-textSecondary hover:text-textPrimary dark:text-textSecondary dark:hover:text-textPrimary' // Changed slate colors
                   )}
                   aria-label="Close modal"
                 >

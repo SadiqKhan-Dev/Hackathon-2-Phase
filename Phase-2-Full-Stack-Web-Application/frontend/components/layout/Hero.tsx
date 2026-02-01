@@ -28,12 +28,12 @@ export default function Hero({ userName = 'User', pending = 0, onPrimaryAction }
         className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
       >
         <div className="max-w-2xl">
-          <h1 className="text-3xl md:text-4xl font-semibold leading-tight mb-3 text-foreground">
+          <h1 className="text-3xl md:text-4xl font-semibold leading-tight mb-3 text-textPrimary">
             Welcome back, <span className="text-primary font-semibold">{userName}</span>
           </h1>
 
-          <p className="text-base text-muted-foreground mb-6">
-            You have <span className="font-semibold text-foreground">{pending}</span> tasks awaiting your attention. Organize your workflow effectively.
+          <p className="text-base text-textSecondary mb-6">
+            You have <span className="font-semibold text-textPrimary">{pending}</span> tasks awaiting your attention. Organize your workflow effectively.
           </p>
 
           <div className="flex items-center gap-3">
@@ -57,8 +57,8 @@ export default function Hero({ userName = 'User', pending = 0, onPrimaryAction }
             <svg viewBox="0 0 320 180" className="w-full h-24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0%" stopColor="#6366F1" stopOpacity="0.9" />
-                  <stop offset="100%" stopColor="#F43F5E" stopOpacity="0.6" />
+                  <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.9" /> {/* Updated to primary hex */}
+                  <stop offset="100%" stopColor="#EC4899" stopOpacity="0.6" /> {/* Updated to accent hex */}
                 </linearGradient>
               </defs>
               <rect width="100%" height="100%" fill="url(#g1)" rx="8" ry="8" opacity="0.12" />
@@ -69,7 +69,7 @@ export default function Hero({ userName = 'User', pending = 0, onPrimaryAction }
 
             <div className="mt-2">
               <h4 className="text-base font-medium">Task Overview</h4>
-              <p className="text-xs text-muted-foreground">Your productivity trends and task completion metrics.</p>
+              <p className="text-xs text-textSecondary">Your productivity trends and task completion metrics.</p>
             </div>
           </div>
         </motion.div>

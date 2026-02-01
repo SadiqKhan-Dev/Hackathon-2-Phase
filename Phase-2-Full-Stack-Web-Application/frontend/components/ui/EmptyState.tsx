@@ -28,9 +28,9 @@ const EmptyState = ({
       case 'all-complete':
         return <CheckCircle2 className="w-12 h-12 text-primary" />;
       case 'no-results':
-        return <Search className="w-12 h-12 text-muted-foreground" />;
+        return <Search className="w-12 h-12 text-textSecondary" />;
       default:
-        return <Inbox className="w-12 h-12 text-muted-foreground" />;
+        return <Inbox className="w-12 h-12 text-textSecondary" />;
     }
   };
 
@@ -40,13 +40,13 @@ const EmptyState = ({
       className
     )}>
       <div className="relative mb-6">
-        <div className="w-20 h-20 rounded-xl bg-muted flex items-center justify-center border border-border">
+        <div className="w-20 h-20 rounded-xl bg-background flex items-center justify-center border border-border">
           {getIcon()}
         </div>
       </div>
 
       <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-      <p className="text-muted-foreground max-w-sm mb-6">
+      <p className="text-textSecondary max-w-sm mb-6">
         {description}
       </p>
 

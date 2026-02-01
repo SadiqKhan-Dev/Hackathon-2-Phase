@@ -165,10 +165,10 @@
 }
 
 @layer base {
-  * {
-    border-color: var(--color-ui-border);
+  html {
+    @apply scroll-smooth;
+    -webkit-tap-highlight-color: transparent;
   }
-
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;

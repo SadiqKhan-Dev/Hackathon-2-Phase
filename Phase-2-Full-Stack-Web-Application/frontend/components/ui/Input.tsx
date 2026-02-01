@@ -54,8 +54,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className={cn(
               'block text-sm font-medium mb-2',
               hasError
-                ? 'text-destructive'
-                : 'text-foreground'
+                ? 'text-danger'
+                : 'text-textPrimary'
             )}
           >
             {label}
@@ -66,7 +66,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <div className="relative">
           {/* Left icon */}
           {leftIcon && (
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-textSecondary pointer-events-none">
               {leftIcon}
             </div>
           )}
@@ -79,15 +79,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                * T020: Base input component with TypeScript interface
                */
               'flex w-full rounded-md border px-3 py-2 text-sm transition-all duration-200',
-              'placeholder:text-muted-foreground',
+              'placeholder:text-textSecondary',
               'disabled:cursor-not-allowed disabled:opacity-50',
               // Typography
-              'text-foreground bg-background',
+              'text-textPrimary bg-background',
               // T021: Focus glow - ring-2 ring-indigo-500/20
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
               hasError
-                ? 'border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30'
-                : 'border-input focus-visible:border-ring focus-visible:ring-ring/30',
+                ? 'border-danger focus-visible:border-danger focus-visible:ring-danger/30'
+                : 'border-input focus-visible:border-primary focus-visible:ring-primary/30',
               leftIcon ? 'pl-9' : '',
               rightIcon ? 'pr-9' : '',
               className
@@ -101,7 +101,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
           {/* Right icon */}
           {rightIcon && (
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-textSecondary pointer-events-none">
               {rightIcon}
             </div>
           )}
@@ -111,7 +111,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {hasError && (
           <p
             id={`${props.id}-error`}
-            className="mt-1 text-sm text-destructive"
+            className="mt-1 text-sm text-danger"
             role="alert"
           >
             {error}
@@ -122,7 +122,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {helperText && !hasError && (
           <p
             id={`${props.id}-helper`}
-            className="mt-1 text-sm text-muted-foreground"
+            className="mt-1 text-sm text-textSecondary"
           >
             {helperText}
           </p>

@@ -43,14 +43,14 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
           <div className="flex -space-x-2 mb-6">
             {[1, 2, 3, 4, 5].map(i => (
-              <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-muted flex items-center justify-center text-xs font-medium">
+            <div className="w-10 h-10 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-xs font-medium">
                 U{i}
               </div>
             ))}
-            <div className="w-10 h-10 rounded-full border-2 border-background bg-primary text-primary-foreground flex items-center justify-center text-xs font-medium">+</div>
+            <div className="w-10 h-10 rounded-full border-2 border-background bg-primary text-background flex items-center justify-center text-xs font-medium">+</div>
           </div>
           <h3 className="text-xl font-semibold mb-2">Powering 50,000+ professionals globally</h3>
-          <p className="text-sm text-muted-foreground font-medium">Trusted by industry leaders</p>
+          <p className="text-sm text-textSecondary font-medium">Trusted by industry leaders</p>
         </div>
       </section>
 
@@ -59,34 +59,34 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-background">
                 <CheckCircle2 className="w-4 h-4" strokeWidth={3} />
               </div>
-              <h3 className="text-lg font-semibold">Task-Agent-Pro</h3>
+              <h3 className="text-lg font-semibold">Task Agent Pro</h3>
             </div>
-            <p className="text-sm text-muted-foreground max-w-sm">
+            <p className="text-sm text-textSecondary max-w-sm">
               The ultimate solution for organizing your projects and tasks. Intelligently designed,
               precision engineered.
             </p>
           </div>
           <div className="space-y-4">
-            <h4 className="font-medium text-sm text-foreground">Solutions</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/dashboard" className="hover:text-foreground transition-colors">For Teams</Link></li>
-              <li><Link href="/dashboard" className="hover:text-foreground transition-colors">Enterprise</Link></li>
-              <li><Link href="/dashboard" className="hover:text-foreground transition-colors">Integrations</Link></li>
+            <h4 className="font-medium text-sm text-textPrimary">Solutions</h4>
+            <ul className="space-y-2 text-sm text-textSecondary">
+              <li><Link href="/dashboard" className="hover:text-textPrimary transition-colors">For Teams</Link></li>
+              <li><Link href="/dashboard" className="hover:text-textPrimary transition-colors">Enterprise</Link></li>
+              <li><Link href="/dashboard" className="hover:text-textPrimary transition-colors">Integrations</Link></li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="font-medium text-sm text-foreground">Resources</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-foreground transition-colors">Documentation</Link></li>
-              <li><Link href="/" className="hover:text-foreground transition-colors">Support Center</Link></li>
-              <li><Link href="/" className="hover:text-foreground transition-colors">Community</Link></li>
+            <h4 className="font-medium text-sm text-textPrimary">Resources</h4>
+            <ul className="space-y-2 text-sm text-textSecondary">
+              <li><Link href="/" className="hover:text-textPrimary transition-colors">Documentation</Link></li>
+              <li><Link href="/" className="hover:text-textPrimary transition-colors">Support Center</Link></li>
+              <li><Link href="/" className="hover:text-textPrimary transition-colors">Community</Link></li>
             </ul>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto mt-12 pt-6 border-t border-border text-center text-xs text-muted-foreground">
+        <div className="max-w-6xl mx-auto mt-12 pt-6 border-t border-border text-center text-xs text-textSecondary">
           &copy; 2026 Task-Agent-Pro. All rights reserved.
         </div>
       </footer>
@@ -101,7 +101,7 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode; titl
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">
+      <p className="text-sm text-textSecondary">
         {description}
       </p>
     </div>

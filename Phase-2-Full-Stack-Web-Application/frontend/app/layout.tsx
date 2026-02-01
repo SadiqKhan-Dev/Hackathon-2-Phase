@@ -18,7 +18,7 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Task-Agent-Pro - Advanced Todo Management',
+  title: 'Task Agent Pro - Advanced Todo Management',
   description: 'An intelligent, professional-grade task management solution',
 }
 
@@ -34,11 +34,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={outfit.className}>
+      <body className={`${outfit.className} bg-background text-textPrimary flex flex-col min-h-screen`}>
         <ThemeProvider>
           <ToastProvider>
             <Header />
-              <main>
+              <main className="flex flex-col flex-1 min-h-screen">
                 <PageTransition>
                   {children}
                 </PageTransition>
