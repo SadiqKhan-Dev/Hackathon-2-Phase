@@ -129,9 +129,9 @@ Before deploying, ensure you have the required environment variables:
 ```bash
 # Create Kubernetes secrets for sensitive data
 kubectl create secret generic todo-secrets \
-  --from-literal=BETTER_AUTH_SECRET="your_auth_secret" \
-  --from-literal=COHERE_API_KEY="your_cohere_api_key" \
-  --from-literal=DATABASE_URL="your_database_url"
+  --from-literal=BETTER_AUTH_SECRET="your-actual-auth-secret" \
+  --from-literal=COHERE_API_KEY="your-actual-cohere-api-key" \
+  --from-literal=DATABASE_URL="your-actual-database-url"
 ```
 
 ## Troubleshooting

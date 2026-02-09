@@ -85,11 +85,8 @@ Guiding Principles – AI-first, stateless, security, no manual code, hackathon 
 
 Deliverables and Success Criteria – Working chatbot, repo updates, demo: natural queries handle full features.
 
-Environment Variables:
 
-COHERE_API_KEY=your_cohere_api_key_here (for AI calls)
-
-Use existing BETTER_AUTH_SECRET, DATABASE_URL.
+Use existing environment variables for authentication and database.
 
 Generate immediately — this constitution must guarantee a seamless, intelligent, error-free chatbot integration that elevates the full-stack app to flagship AI status. Perfection in every detail.
 
